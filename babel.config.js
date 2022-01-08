@@ -5,25 +5,32 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      // [
-      //   // require.resolve('babel-plugin-module-resolver'),
-      //   'module-resolver',
-      //   {
-      //     // cwd: 'babelrc',
-      //     // extensions: ['.ts', '.tsx', '.js', '.ios.js', '.android.js'],
-      //     root: ['./src'],
-      //     extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
-      //     alias: {
-      //       '@assets': './src/assets',
-      //       '@components': './src/components',
-      //       '@hooks': './src/hooks',
-      //       '@navigation': './src/navigation',
-      //       '@screens': './src/screens',
-      //       '@styles': './src/styles',
-      //       '@utils': './src/utils',
-      //     },
-      //   },
-      // ],
+      [
+        'module-resolver',
+        {
+          root: ['./'],
+          alias: {
+            // '@assets': './src/assets',
+            // '@components': './src/components',
+            // '@hooks': './src/hooks',
+            // '@navigation': './src/navigation',
+            // '@screens': './src/screens',
+            // '@styles': './src/styles',
+            // '@utils': './src/utils',
+            '^~(.+)': './src/\\1',
+          },
+          extensions: [
+            '.ios.js',
+            '.android.js',
+            '.js',
+            '.jsx',
+            '.json',
+            '.tsx',
+            '.ts',
+            '.native.js',
+          ],
+        },
+      ],
       'react-native-reanimated/plugin',
     ],
   }

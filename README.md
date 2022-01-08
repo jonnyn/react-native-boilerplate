@@ -27,7 +27,7 @@ Theme folder is where you store colors, fonts setting, metrics, and styles.
 
 #### Absolute path
 
-If your project structure become complicated and has a lot of nested folders, you will have problem with relative paths. In the boilerplate, you can use absolute paths. You can write simple import statement i.e 'components/Button'. No more ../../../components/Button. The configuration is written in `babel.config.js`.
+If your project structure become complicated and has a lot of nested folders, you will have problem with relative paths. In the boilerplate, you can use absolute paths. You can write simple import statement i.e '~components/Button'. No more ../../../components/Button. The configuration is written in `babel.config.js` and `tsconfig.json`.
 
 #### Code formatting, fixing and testing on pre commit
 

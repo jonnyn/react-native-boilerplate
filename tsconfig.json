@@ -2,6 +2,8 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "baseUrl": ".",
+    "paths": {"~*": ["./src/*"]}, 
     // "allowJs": true,
     // "allowSyntheticDefaultImports": true,
     // "esModuleInterop": true,
@@ -23,6 +25,7 @@
     //   "@utils/*": ["src/utils/*"]
     // },
   },
+  "exclude": ["node_modules"]
   // "include": ["src/**/*.ts", "src/**/*.tsx"],
   // "exclude": ["node_modules", ".vscode"]
 }
