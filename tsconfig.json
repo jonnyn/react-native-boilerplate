@@ -13,17 +13,6 @@
     // "moduleResolution": "node",
     // "noEmit": true,
     // "target": "esnext",
-    // "baseUrl": ".",
-    // "paths": {
-    //   "@/*": ["src/*"],
-    //   "@assets/*": ["src/assets/*"],
-    //   "@components/*": ["src/components/*"],
-    //   "@hooks/*": ["src/hooks/*"],
-    //   "@navigation/*": ["src/navigation/*"],
-    //   "@screens/*": ["src/screens/*"],
-    //   "@styles/*": ["src/styles/*"],
-    //   "@utils/*": ["src/utils/*"]
-    // },
   },
   "exclude": ["node_modules"]
   // "include": ["src/**/*.ts", "src/**/*.tsx"],

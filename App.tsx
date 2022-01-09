@@ -2,11 +2,10 @@ import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Provider } from 'react-redux'
-import AppContextProvider from './src/context/AppContext'
-import { store } from './src/store/store'
-import useCachedResources from './src/hooks/useCachedResources'
-import useColorScheme from './src/hooks/useColorScheme'
-import Navigation from './src/navigation'
+import AppContextProvider from '~context/AppContext'
+import { store } from '~redux'
+import { useCachedResources, useColorScheme } from '~hooks'
+import Navigation from '~navigation'
 
 export default function App() {
   const isLoadingComplete = useCachedResources()
