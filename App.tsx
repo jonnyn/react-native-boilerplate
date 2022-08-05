@@ -4,6 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Provider } from 'react-redux'
 import AppContextProvider from '~context/AppContext'
 import { store } from '~redux'
+import { LoggingProvider } from '~utils/logging'
 import { useCachedResources, useColorScheme } from '~hooks'
 import Navigation from '~navigation'
 
@@ -16,12 +17,14 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <Provider store={store}>
-          <AppContextProvider>
-            <Navigation colorScheme={colorScheme} />
-            <StatusBar />
-          </AppContextProvider>
-        </Provider>
+        <LoggingProvider>
+          <Provider store={store}>
+            <AppContextProvider>
+              <Navigation colorScheme={colorScheme} />
+              <StatusBar />
+            </AppContextProvider>
+          </Provider>
+        </LoggingProvider>
       </SafeAreaProvider>
     )
   }

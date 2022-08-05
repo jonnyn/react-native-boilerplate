@@ -27,6 +27,19 @@
     },
     "web": {
       "favicon": "./src/assets/images/favicon.png"
-    }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "clarity-inc",
+            "project": "react-native-boilerpate",
+            "authToken": "5af0ad4e9eda4cd3a0a3b07dffd79fa2457a3e82559745e58544f5d1d24b1100"
+          }
+        }
+      ]
+    },
+    "plugins": ["sentry-expo"]
   }
 }
